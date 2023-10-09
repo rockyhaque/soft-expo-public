@@ -16,8 +16,12 @@ const FeaturedConferences = () => {
     return (
         <div>
             <div className="text-center">
-                <h2 className="text-4xl">Featured Conferences: {conferences.length}</h2>
-                <p>BASIS SoftExpo is the largest private-sector exposition aimed at showcasing IT and ITES products and services in Bangladesh.</p>
+
+                {/* <h2 className="text-4xl mt-16 mb-10">Featured Conferences: {conferences.length}</h2> */}
+
+                <h2 className="text-4xl mt-16 mb-10">Big Shows</h2>
+
+                <p className="my-8">BASIS SoftExpo is the largest private-sector exposition aimed at showcasing IT and ITES products and services in Bangladesh.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
                 {
