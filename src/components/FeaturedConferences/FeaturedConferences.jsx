@@ -5,8 +5,10 @@ const FeaturedConferences = () => {
 
     const [conferences, setConferences] = useState([]);
 
+    const [dataLength, setDataLength] = useState(4);
+
     useEffect(() => {
-        fetch('conference.json')
+        fetch('./conference.json')
         .then(res => res.json())
         .then(data => setConferences(data))
     }, [])
@@ -19,8 +21,13 @@ const FeaturedConferences = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
                 {
-                    conferences.map(conference => <Conference key={conference.id} conference={conference}></Conference>)
+                    conferences.slice(0, dataLength).map(conference => <Conference key={conference.id} conference={conference}></Conference>)
                 }
+            </div>
+            <div className={dataLength === conferences.length && 'hidden'}>
+                <div className="text-center my-10">
+                    <button onClick={() => setDataLength(conferences.length)} className="btn btn-outline btn-info">Load More</button>
+                </div>
             </div>
         </div>
 

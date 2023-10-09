@@ -1,8 +1,9 @@
 import { MdLocationOn } from "react-icons/md";
 import { AiOutlineFieldTime } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Conference = ({ conference }) => {
-  const { cover, conference_title, company_name, online_or_offline, location, conference_type, time} = conference;
+  const { id, cover, conference_title, company_name, online_or_offline, location, conference_type, time} = conference;
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
@@ -23,7 +24,9 @@ const Conference = ({ conference }) => {
             <h2 className="flex"><AiOutlineFieldTime  className="text-2xl mr-2"></AiOutlineFieldTime>{time}</h2>
         </div>
         <div className="card-actions justify-center">
-          <button className="btn btn-info">Details</button>
+          <Link to={`/conference/${id}`}>
+            <button className="btn btn-info">Details</button>
+          </Link>
         </div>
       </div>
     </div>
