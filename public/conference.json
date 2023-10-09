@@ -1,0 +1,117 @@
+[
+     {
+      "id": 1,
+      "cover": "https://i.ibb.co/W366xK1/woman-it.jpg",
+      "conference_title": "Women In IT: Inclusion of women in smart Bangladesh",
+      "company_name": "Google LLC",
+      "online_or_offline": "Online",
+      "location": "Dhaka, Bangladesh",
+      "conference_type": "Day Time",
+      "time": "03:00pm-04:00pm",
+      "conference_description": " The Bangladesh Association of Software and Information Services (BASIS) will host BASIS Softexpo 2023, a large ICT exposition in the South Asia region, from February 23-26, 2023. Bangladesh has made significant progress in digital transformation, utilizing the opportunities provided by Information and Communication Technology (ICT).",
+      "conference_responsibility": "Bring Your Tickets",
+      "educational_requirements": "Bachelor degree to complete any reputational university.",
+      "experiences": "No experience",
+      "contact_information": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+      }
+    },
+    {
+      "id": 2,
+      "cover": "https://i.ibb.co/yqcRg5W/freelancer.jpg",
+      "conference_title": "Freelancers Conference",
+      "company_name": "Google LLC",
+      "online_or_offline": "Offline",
+      "location": "Dhaka, Bangladesh",
+      "conference_type": "Day Time",
+      "time": "04:00pm-05:00pm",
+      "conference_description": "This upcoming session promises an in-depth analysis of prevailing trends in the worldwide market for freelance services. Our honorable speakers will focus on the latest skills and industries that are in high demand. They will also delve into the impact of technological advancements on the need for freelance skills, examine the current developments in remote work, and scrutinize the gig economy.",
+      "conference_responsibility": "Bring Your Tickets",
+      "educational_requirements": "Bachelor degree to complete any reputational university.",
+      "experiences": "No experience",
+      "contact_information": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+      }
+    },
+    {
+      "id": 3,
+      "cover": "https://i.ibb.co/gVzzmqS/startup.jpg",
+      "conference_title": "Startup Conference",
+      "company_name": "Google LLC",
+      "online_or_offline": "Online",
+      "location": "Dhaka, Bangladesh",
+      "conference_type": "Day Time",
+      "time": "05:00pm-06:00pm",
+      "conference_description": " The Bangladesh startup scene has been on a rapid rise, attracting FDI and becoming a hub for entrepreneurship and innovation. With over 1,200 active startups and a cumulative FDI of $800 million in the past five years, the country is flourishing in sectors such as fintech, logistics, and mobility.",
+      "conference_responsibility": "Bring Your Tickets",
+      "educational_requirements": "Bachelor degree to complete any reputational university.",
+      "experiences": "No experience",
+      "contact_information": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+      }
+    },
+    {
+      "id": 4,
+      "cover": "https://i.ibb.co/nbJHqN9/ministerial.jpg",
+      "conference_title": "Ministerial Conference",
+      "company_name": "Google LLC",
+      "online_or_offline": "Online",
+      "location": "Dhaka, Bangladesh",
+      "conference_type": "Day Time",
+      "time": "06:00pm-07:00pm",
+      "conference_description": "Our Honorable Prime Minister has declared Information Technology as the product of the year 2022, highlighting the government's commitment to the well-being of the country and its people. ",
+      "conference_responsibility": "Bring Your Tickets",
+      "educational_requirements": "Bachelor degree to complete any reputational university.",
+      "experiences": "No experience",
+      "contact_information": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+      }
+    },
+    {
+      "id": 5,
+      "cover": "https://i.ibb.co/jGP5mCb/developer.jpg",
+      "conference_title": "Developers Conference",
+      "company_name": "Google LLC",
+      "online_or_offline": "Online",
+      "location": "Dhaka, Bangladesh",
+      "conference_type": "Day Time",
+      "time": "07:00pm-08:00pm",
+      "conference_description": "The Developers Conference brings together leading developers on the stage, sharing their tips and beyond-the-book tricks with budding developers. The objective is to encourage consumer-friendly, disruptive apps and solutions like your organization’s own products and solutions, as well as cyber-security and future trends. ",
+      "conference_responsibility": "Bring Your Tickets",
+      "educational_requirements": "Bachelor degree to complete any reputational university.",
+      "experiences": "No experience",
+      "contact_information": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+      }
+    },
+    {
+      "id": 6,
+      "cover": "https://i.ibb.co/LSxPf0n/job.jpg",
+      "conference_title": "ICT Career Camp & Job Fair",
+      "company_name": "Google LLC",
+      "online_or_offline": "Online",
+      "location": "Dhaka, Bangladesh",
+      "conference_type": "Day Time",
+      "time": "08:00pm-09:00pm",
+      "conference_description": "One of the most-attended events of BASIS SoftExpo every year is the Career Camp. In this event, we have Corporate Leaders as speakers sharing their tips and guidelines as to how to do better in career, we bring small boot-camps on how to add value to work-place, and connect the potential employers with job-seekers.",
+      "conference_responsibility": "Bring Your Tickets",
+      "educational_requirements": "Bachelor degree to complete any reputational university.",
+      "experiences": "No experience",
+      "contact_information": {
+        "phone": "01750-00 00 00",
+        "email": "info@gmail.com",
+        "address": "Dhanmondi 32, Sukrabad Dhaka, Bangladesh"
+      }
+    }
+  
+  ]
