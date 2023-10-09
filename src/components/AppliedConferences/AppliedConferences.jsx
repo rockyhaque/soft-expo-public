@@ -6,6 +6,22 @@ const AppliedConferences = () => {
   const conferences = useLoaderData();
 
   const [appliedConferences, setAppliedConferences] = useState([]);
+  const [displayConferences, setDisplayConferences] = useState([]);
+
+  const handleConferencesFilter = filter => {
+    if(filter === 'all'){
+      setDisplayConferences(appliedConferences);
+    }
+    else if(filter === 'online'){
+      const onlineConferences = appliedConferences.filter(conference => conference.online_or_offline === "Online");
+      setDisplayConferences(onlineConferences);
+    }
+    else if(filter === 'offline'){
+      const offlineConferences = appliedConferences.filter(conference => conference.online_or_offline = 'Offline');
+      setDisplayConferences(offlineConferences);
+    }
+  }
+
 
   useEffect(() => {
     const storedConferenceIds = getStoredConference();
@@ -23,9 +39,11 @@ const AppliedConferences = () => {
       }
 
       // console.log(conferences, storedConferenceIds, conferencesApplied);
+
       setAppliedConferences(conferencesApplied);
+      setDisplayConferences(conferencesApplied);
     }
-  }, []);
+  }, [conferences]);
   return (
     <div>
       <h2>Conferences I applied : {appliedConferences.length}</h2>
@@ -33,14 +51,14 @@ const AppliedConferences = () => {
       <details className="dropdown mb-32">
         <summary className="m-1 btn">open or close</summary>
         <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-          <li><a>All</a></li>
-          <li><a>Online</a></li>
-          <li><a>Offline</a></li>
+          <li onClick={() => handleConferencesFilter('all')}><a>All</a></li>
+          <li onClick={() => handleConferencesFilter('online')}><a>Online</a></li>
+          <li onClick={() => handleConferencesFilter('offline')}><a>Offline</a></li>
         </ul>
       </details>
 
       <ul>
-        {appliedConferences.map((conference) => (
+        {displayConferences.map((conference) => (
           <li key={conference.id}>
             <span>
                 {conference.conference_title} 
