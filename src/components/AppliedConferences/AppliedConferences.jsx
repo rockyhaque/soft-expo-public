@@ -49,7 +49,7 @@ const AppliedConferences = () => {
       <h2>Conferences I applied : {appliedConferences.length}</h2>
 
       <details className="dropdown mb-32">
-        <summary className="m-1 btn">open or close</summary>
+        <summary className="m-1 btn">Filter</summary>
         <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
           <li onClick={() => handleConferencesFilter('all')}><a>All</a></li>
           <li onClick={() => handleConferencesFilter('online')}><a>Online</a></li>
@@ -60,9 +60,12 @@ const AppliedConferences = () => {
       <ul>
         {displayConferences.map((conference) => (
           <li key={conference.id}>
-            <span>
+            <span className="round text-orange-400">
                 {conference.conference_title} 
-                {conference.company_name} : {conference.online_or_offline}
+                
+            </span>
+            <span>
+              Apply Mode : {conference.online_or_offline}
             </span>
           </li>
         ))}

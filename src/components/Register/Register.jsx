@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Hook/AuthProvider";
-import { Toaster } from "react-hot-toast";
+// import { Toaster } from "react-hot-toast";
 
 const Register = () => {
 
@@ -15,37 +15,44 @@ const Register = () => {
     //     setEmail(text);
     // }
 
-    const handleRegister = () => {
-        if(!/^(?=.*[A-Za-z])(?=.+\d)[A-Za-z\d]{8, }$/.test(password)){
-            setError("Minimum 8 character, at least one leter and one number ");
-        }
-        else{
-            setError("");
-            if(email){
-                signUp(email, password)
+    const handleRegister = (e) => {
+        e.preventDefault()
+        signUp(email, password)
                 .then(result => {
                     console.log(result.user);
                 })
-            }
-        }
+        // if(!/^(?=.*[A-Za-z])(?=.+\d)[A-Za-z\d]{8,}$/.test(password)){
+        //     setError("Minimum 8 character, at least one leter and one number ");
+        // }
+        // else{
+        //     setError("");
+        //     if(email){
+        //         signUp(email, password)
+        //         .then(result => {
+        //             console.log(result.user);
+        //         })
+        //     }
+        // }
     }
  
   return (
     <div>
 
-    <div><Toaster/></div>
-    toast.error(error)
+    
+    
     
       <div className="hero min-h-screen bg-base-200">
+      {/* <div><Toaster/></div> */}
         <div className="hero-content flex-col lg:flex-row-reverse">
             
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleRegister} className="card-body">
+            <p>{error}</p>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                {/* <p>{error}</p> */}
+                {/* toast.error(error); */}
                 <input onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   name="email"
@@ -75,11 +82,11 @@ const Register = () => {
                 </div>
               </div>
               <div className="form-control mt-6">
-                <button onClick={handleRegister} className="btn btn-info">Register</button>
+                <button type="submit" onClick={handleRegister} className="btn btn-info">Register</button>
               </div>
 
               <div className="text-center">
-                <button className="btn my-4 ">
+                <button type="button" className="btn my-4 ">
                   Google Login
                 </button>
               </div>
