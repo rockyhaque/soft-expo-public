@@ -28,12 +28,15 @@ If you wish to participate in BASIS SoftExpo 2023, please follow the official [S
 
 ## Features
 
-- **Donating:** Provide an intuitive and user-friendly interface for students to view available courses and seamlessly register for them.
+- **Register:** Provide an intuitive and user-friendly interface for user to view available conference register for them.
 
-- **Spreading the Word:** - Share our campaign with your network on social media, email, or in person. Let others know about our cause and encourage them to get involved.
+- **Login:** - Already signed up email, user can access their conference details
 
+- **User Friendly UI:** User friendly UI
 
-- **User Friendly UI:** Secure access based on roles (student, administrator).
+- **Responsive:** Responsive for mobile, tablet and large devices
+
+- **Conference Details:** User can easily book their seat
 
 
 

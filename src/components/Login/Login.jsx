@@ -1,15 +1,29 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Hook/AuthProvider";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  const { googleSignIn } = useContext(AuthContext);
+  const { googleSignIn, signIn } = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
   const handleGoogle = () => {
     googleSignIn()
     .then(result => {
         console.log(result.user);
     })
+  }
+
+  const handleLogin = (e) =>{
+    e.preventDefault()
+        signIn(email, password)
+          .then(result => {
+              console.log(result.user);
+          })
+          .catch((err) => {
+            setError(err.message);
+          })
   }
 
   return (
@@ -24,7 +38,8 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input
+                <p>{error}</p>
+                <input onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   name="email"
                   placeholder="email"
@@ -36,7 +51,7 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input
+                <input onChange={(e) => setPassword(e.target.value)}
                   type="password"
                   name="password"
                   placeholder="password"
@@ -53,7 +68,7 @@ const Login = () => {
                 </div>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-info ">Login</button>
+                <button onClick={handleLogin} className="btn btn-info ">Login</button>
               </div>
 
               <div className="text-center">
