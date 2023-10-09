@@ -1,4 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveConference } from "../../utility/localStorage";
 
 const ConferenceDetails = () => {
     const conferences = useLoaderData();
@@ -6,6 +9,12 @@ const ConferenceDetails = () => {
     const idInt = parseInt(id);
     const conference = conferences.find(conference => conference.id === idInt);
     console.log(conference);
+
+    const handleBook = () => {
+        saveConference(idInt);
+        toast('Congratulations! Conference Booked Sucessfully.')
+    }
+
     return (
         <div>
             <h1 className="text-center text-4xl my-10"> {conference.conference_title}</h1>
@@ -26,8 +35,9 @@ const ConferenceDetails = () => {
                 </div>
                 <div className="border">
                     <h2 className="text-2xl">Side bar</h2>
-                    <button className="btn btn-outline btn-info w-full">Book Now</button>
+                    <button onClick={handleBook} className="btn btn-outline btn-info w-full">Book Now</button>
                 </div>
+                <ToastContainer />
             </div>
         </div>
     );

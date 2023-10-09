@@ -23,7 +23,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/applied',
-        element: <AppliedConferences></AppliedConferences>
+        element: <AppliedConferences></AppliedConferences>,
+        loader: () => fetch('../conference.json')
       },
       {
         path: '/conference/:id',
